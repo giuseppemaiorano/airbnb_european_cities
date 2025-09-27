@@ -8,17 +8,17 @@ Come eseguire
 Lo script carica i dati, applica una pulizia minima (drop NA, rimozione prezzi non positivi, taglio del 1% più alto degli outlier) e genera i grafici delle quattro sezioni.
 
 ## Cosa produce
--Prezzo mediano per room_type (bar chart) – confronto Roma/Berlino. 
--Pulizia vs soddisfazione (scatter + retta, r) per ciascuna città. 
--Prezzo vs distanza dal centro (nuvola + mediana per bin). 
--Superhost premium (bar chart + differenza % stampata a console). 
+1) Prezzo mediano per room_type (bar chart) – confronto Roma/Berlino. 
+2) Pulizia vs soddisfazione (scatter + retta, r) per ciascuna città. 
+3) Prezzo vs distanza dal centro (nuvola + mediana per bin). 
+4) Superhost premium (bar chart + differenza % stampata a console). 
 
 Suggerimento: per salvare i grafici sostituisci plt.show() con fig.savefig("nome.png", dpi=150).
 
 ## Personalizzazioni
--Città: modifica la lista cities = ["Rome", "Berlin"]. 
--Robustezza: usa pd.qcut per bin a numerosità simile o np.log1p(realSum) per attenuare outlier.
--Segmenti: filtra per room_type o confronta guest_satisfaction_overall per Superhost.
+1) Città: modifica la lista cities = ["Rome", "Berlin"]. 
+2) Robustezza: usa pd.qcut per bin a numerosità simile o np.log1p(realSum) per attenuare outlier.
+3) Segmenti: filtra per room_type o confronta guest_satisfaction_overall per Superhost.
 
 ## Struttura
 airbnb_european_cities.ipynb – notebook principale (grafici e commenti). 
